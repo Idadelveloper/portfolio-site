@@ -1,0 +1,144 @@
+.idadel {
+    font-size: 16rem;
+    font-weight: 600;
+    position: absolute;
+    color: #202224;
+    /* background-color: aqua; */
+}
+
+.banner {
+    width: 100vw;
+    min-width: 100%;
+    height: 100vh;
+    min-height: 100%;
+    padding: 0.5rem;
+}
+
+.intro {
+    padding: 5rem;
+    visibility: hidden;
+}
+
+img {
+    z-index: -1;
+}
+
+.img1 {
+    height: 50rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.img2 {
+    height: 50rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.circle {
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circle1 {
+    width: 27rem;
+    height: 27rem;
+    background-color: #6851DD;
+    position: fixed;
+    right: 25%;
+    top: -25%;
+    display: inline-block;
+}
+
+.circle2 {
+    width: 20rem;
+    height: 20rem;
+    background-color: #FEBDF2;
+    position: fixed;
+    display: inline-block;
+    right: 40%;
+    bottom: -18%;
+}
+
+
+/* For tablets */
+
+@media only screen and (min-device-width: 768px) {
+    .idadel {
+        font-size: 12rem;
+    }
+    .img1 {
+        height: 35rem;
+    }
+    .img2 {
+        height: 35rem;
+    }
+    .circle1 {
+        width: 22rem;
+        height: 22rem;
+    }
+    .circle2 {
+        width: 16rem;
+        height: 16rem;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    /* For mobile phones: */
+    .idadel {
+        font-size: 6rem;
+    }
+    img {
+        display: none;
+    }
+    .circle1 {
+        width: 27rem;
+        height: 27rem;
+        left: -20%;
+        top: -10%;
+    }
+    .circle2 {
+        width: 12rem;
+        height: 12rem;
+        top: 40%;
+        right: 10%;
+    }
+    .intro {
+        position: absolute;
+        visibility: visible;
+        padding: 7rem;
+        top: 20rem;
+    }
+}
+
+
+/* For smartphones */
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    .idadel {
+        font-size: 4rem;
+    }
+    img {
+        display: none;
+    }
+    .circle1 {
+        width: 25rem;
+        height: 25rem;
+        left: -35%;
+        top: -5%;
+    }
+    .circle2 {
+        width: 10rem;
+        height: 10rem;
+        top: 40%;
+        right: 10%;
+    }
+    .intro {
+        position: absolute;
+        visibility: visible;
+        top: 15rem;
+    }
+}
