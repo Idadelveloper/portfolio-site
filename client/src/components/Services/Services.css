@@ -1,0 +1,78 @@
+.parent {
+    height: 30rem;
+    background-color: #FFFFFF;
+    position: relative;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.service {
+    display: inline-block;
+    background-color: rosybrown;
+    margin: 2px;
+    border-radius: 1rem;
+    padding: 2rem 5rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 2rem auto;
+    font-weight: 600;
+}
+
+.web,
+.mobile,
+.devops {
+    background-color: #6851DD;
+    color: #F8F6FF;
+}
+
+.web:hover,
+.mobile:hover,
+.devops:hover {
+    background-color: #202224;
+    color: #F8F6FF;
+}
+
+.ds,
+.blockchain,
+.ml-ai {
+    background-color: #FEBDF2;
+    color: #202224;
+}
+
+.ds:hover,
+.blockchain:hover,
+.ml-ai:hover {
+    background-color: #6851DD;
+    color: #F8F6FF;
+}
+
+.opensource,
+.community {
+    background-color: #202224;
+    color: #F8F6FF;
+}
+
+.opensource:hover,
+.community:hover {
+    background-color: #FEBDF2;
+    color: #202224;
+}
+
+@media only screen and (max-width: 950px) {
+    /* For mobile phones: */
+    .parent {
+        height: 20rem;
+    }
+    .service {
+        margin: 0.2rem;
+        border-radius: 1rem;
+        padding: 1rem 3rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 0.5rem;
+    }
+}
