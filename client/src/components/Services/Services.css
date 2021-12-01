@@ -1,5 +1,4 @@
 .parent {
-    height: 30rem;
     background-color: #FFFFFF;
     position: relative;
     margin-top: 2rem;
@@ -64,9 +63,6 @@ h2 {
 
 @media only screen and (max-width: 950px) {
     /* For mobile phones: */
-    .parent {
-        height: 20rem;
-    }
     .service {
         margin: 0.2rem;
         border-radius: 1rem;
