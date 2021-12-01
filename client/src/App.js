@@ -11,7 +11,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <Cursor />
+        {/* <Cursor /> */}
         <div className="App">
           
           <Home />
