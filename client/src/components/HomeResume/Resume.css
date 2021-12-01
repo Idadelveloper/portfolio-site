@@ -1,0 +1,82 @@
+.resume-text1 {
+    color: transparent;
+    font-size: 12vw;
+    font-weight: 700;
+    text-align: left;
+    -webkit-text-stroke: 1px #FEBDF2;
+    letter-spacing: 3rem;
+    line-height: 20vh;
+    position: absolute;
+    z-index: -1;
+    top: -1.5rem;
+    left: -1rem;
+}
+
+.resume-text2 {
+    font-size: 4vw;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    left: 30%;
+}
+
+.resume-text {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    display: inline-block;
+}
+
+.image {
+    z-index: 1;
+    display: inline-block;
+}
+
+.resume {
+    display: flex;
+}
+
+.image:hover {
+    opacity: 85%;
+}
+
+.resume-text2:hover {
+    color: #6851DD;
+}
+
+.resume-text3,
+.resume-text4 {
+    position: absolute;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 640px) {
+    /* For mobile phones: */
+    .image {
+        filter: contrast(50%);
+    }
+    .resume-text {
+        display: none;
+    }
+    .resume-text3,
+    .resume-text4 {
+        visibility: visible;
+        z-index: 10;
+    }
+    .resume-text3 {
+        -webkit-text-stroke: 1px #FFFFFF;
+        color: transparent;
+        font-size: 20vw;
+        font-weight: 600;
+        line-height: 18vh;
+        letter-spacing: 2vw;
+    }
+    .resume-text4 {
+        color: #FFFFFF;
+        font-size: 10vw;
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin: 16vh auto;
+    }
+}
