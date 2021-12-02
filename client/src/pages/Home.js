@@ -3,6 +3,7 @@ import Banner from '../components/Banner';
 import Services from '../components/Services/Services';
 import Portfolio from '../components/HomePortfolio/Portfolio';
 import Resume from '../components/HomeResume/Resume';
+import ContactAbout from '../components/ContactAbout/ContactAbout';
 
 export default function Home() {
     return (
@@ -11,6 +12,7 @@ export default function Home() {
             <Services />
             <Portfolio />
             <Resume />
+            <ContactAbout />
         </div>
     )
 }
