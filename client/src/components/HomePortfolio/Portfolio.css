@@ -65,7 +65,7 @@
         color: transparent;
         font-size: 20vw;
         font-weight: 600;
-        line-height: 18vh;
+        line-height: 12vh;
         letter-spacing: 2vw;
     }
     .text4 {
@@ -74,6 +74,10 @@
         text-align: center;
         left: 0;
         right: 0;
-        margin: 16vh auto;
+        top: 40%;
+        margin: auto;
+    }
+    .portfo {
+        position: relative;
     }
 }
