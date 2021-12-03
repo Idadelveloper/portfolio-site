@@ -11,11 +11,11 @@ const Menu = ({ open, ...props }) => {
         <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
             <div className="menu-circle"></div>
             <a href="/" tabIndex={tabIndex}>Home</a>
-            <a href="/" tabIndex={tabIndex}>About</a>
-            <a href="/" tabIndex={tabIndex}>Portfolio</a>
-            <a href="/" tabIndex={tabIndex}>Services</a>
-            <a href="/" tabIndex={tabIndex}>Blog</a>
-            <a href="/" tabIndex={tabIndex}>Contact</a>
+            <a href="/about" tabIndex={tabIndex} >About</a>
+            <a href="/projects" tabIndex={tabIndex}>Portfolio</a>
+            <a href="#services" tabIndex={tabIndex}>Services</a>
+            <a href="/blog" tabIndex={tabIndex}>Blog</a>
+            <a href="/contact" tabIndex={tabIndex}>Contact</a>
         </StyledMenu>
     </div>
   )
