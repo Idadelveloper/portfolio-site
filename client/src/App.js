@@ -5,6 +5,7 @@ import { GlobalStyles } from './global';
 import { theme } from './theme';
 import Home from './pages/Home';
 import Cursor from './components/Cursor';
+import MyRoutes from './routes/MyRoutes';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         {/* <Cursor /> */}
         <div className="App">
           
-          <Home />
+          <MyRoutes />
         </div>
     </>
     </ThemeProvider>
