@@ -3,17 +3,11 @@ import './Banner.css'
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../global';
 import { theme } from '../theme';
-import Menu from './Menu/Menu';
-import Burger from './Burger/Burger';
-import { useOnClickOutside } from '../hooks';
 
 import LeftBackground from '../assets/3d-top-right.png'
 import RightBackground from '../assets/3d-bottom-left.png'
 
 export default function Banner() {
-    const [open, setOpen] = useState(false);
-    const node = useRef();
-    useOnClickOutside(node, () => setOpen(false));
     return (
         <ThemeProvider theme={theme}>
         <>
@@ -30,10 +24,6 @@ export default function Banner() {
                     </div>
                     <img src={RightBackground} alt=""className="img2 absolute object-right-bottom" />
                 </div>
-            </div>
-            <div ref={node}>
-                <Burger open={open} setOpen={setOpen} />
-                <Menu open={open} setOpen={setOpen} />
             </div>
         </>
     </ThemeProvider>
