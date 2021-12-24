@@ -1,0 +1,180 @@
+.myresume {
+    padding: 5rem;
+    color: #202224;
+    font-weight: 200;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text-title {
+    flex-grow: 0;
+}
+
+.divider {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #202224;
+    border-radius: 1px;
+}
+
+.resume-heading {
+    margin-bottom: 4rem;
+}
+
+.ida-name {
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.job-title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #6851DD;
+}
+
+.heading-location {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    color: #AAA492;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.resume-summary,
+.resume-experience,
+.resume-certifications,
+.resume-skills,
+.resume-education,
+.resume-extracurricular {
+    text-align: left;
+}
+
+.sub-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+div>h3>span {
+    color: #6851DD;
+}
+
+.ext,
+.experience,
+.education {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ex-date,
+.ed-date,
+.ed-location,
+.ex-location,
+.cert-giver {
+    text-align: right;
+    font-style: italic;
+}
+
+.ex-date,
+.ed-date,
+.cert-giver {
+    color: #6851DD;
+}
+
+.ex-com,
+.school {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.ex-pos,
+.major {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+li {
+    list-style-type: circle;
+}
+
+.cert {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cert-name>a {
+    text-decoration: underline;
+    text-decoration-color: #6851DD;
+}
+
+.cert-name>a:hover,
+.contact-links>span:hover {
+    color: #6851DD;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 640px) {
+    /* For smaller screens: */
+    .myresume {
+        font-size: 0.8rem;
+        padding: 2rem;
+    }
+    .ida-name {
+        font-size: 2rem;
+    }
+    .job-title {
+        font-size: 0.8rem;
+    }
+    .heading-location {
+        font-size: 0.5rem;
+    }
+    .contact-links {
+        display: grid;
+        text-align: center;
+        height: 10rem;
+        font-size: 0.75rem;
+    }
+    .heading-location {
+        font-size: 0.7rem;
+    }
+    .sub-heading {
+        font-size: 1rem;
+    }
+    .ext,
+    .experience,
+    .education {
+        display: grid;
+        justify-content: space-between;
+    }
+    .ex-com,
+    .school {
+        font-size: 0.75rem;
+    }
+    .ex-pos,
+    .major {
+        font-size: 0.65rem;
+    }
+    .ex-date,
+    .ed-date,
+    .ed-location,
+    .ex-location,
+    .cert-giver,
+    .ex-com,
+    .ex-pos,
+    .school,
+    .major {
+        text-align: left;
+    }
+}
