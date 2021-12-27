@@ -35,20 +35,10 @@
     left: -5vw;
 }
 
-.about-title {
-    color: transparent;
-    font-size: 5vw;
-    font-weight: 500;
-    -webkit-text-stroke: 1px #6851DD;
-    text-align: left;
-    margin-top: 2vh;
-    margin-left: 3vw;
-}
-
 .about-content {
     margin-left: 10vw;
     margin-right: 10vw;
-    margin-top: 10vh;
+    margin-top: 7rem;
 }
 
 .about-content div {

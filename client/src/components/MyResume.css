@@ -1,5 +1,6 @@
 .myresume {
     padding: 5rem;
+    padding-top: 7rem;
     color: #202224;
     font-weight: 200;
 }
@@ -130,6 +131,7 @@ li {
     .myresume {
         font-size: 0.8rem;
         padding: 2rem;
+        padding-top: 6rem;
     }
     .ida-name {
         font-size: 2rem;
