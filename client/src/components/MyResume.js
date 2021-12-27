@@ -11,7 +11,6 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 export default function MyResume() {
     return (
         <div>
-            <h1 className="about-title">Resume</h1>
             <div className="myresume" id="resume">
                 <div className="resume-heading">
                     <h1 className="ida-name mb-2">Meh Mbeh <span><b>Ida Delphine</b></span></h1>
