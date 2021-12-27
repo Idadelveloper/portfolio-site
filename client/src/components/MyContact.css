@@ -1,8 +1,8 @@
 .contact {
-    position: relative;
+    padding-top: 10rem;
     background-color: #FFFFFF;
-    height: 100vh;
-    width: 100%
+    height: 100%;
+    width: 100%;
 }
 
 .form {
@@ -75,11 +75,15 @@ textarea:focus {
 
 @media only screen and (max-width: 850px) {
     /* For smaller screens: */
+    .contact {
+        padding-top: 7rem;
+    }
     .contact-image {
         display: none;
     }
     .form {
         width: 100%;
+        text-align: center;
     }
     input {
         height: 2rem;
@@ -92,5 +96,8 @@ textarea:focus {
         height: 2.5rem;
         border-radius: 8px;
         font-size: 1rem;
+    }
+    .form>p {
+        font-size: 0.8rem;
     }
 }

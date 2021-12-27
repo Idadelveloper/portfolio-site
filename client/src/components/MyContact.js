@@ -7,11 +7,11 @@ export default function MyContact() {
         <div>
             <div className="">
                 <div className="contact">
-                    <h1 className="about-title">Contact</h1>
                     <div className="contact-circle1"></div>
                     <div className="contact-circle2"></div>
                     <div className="contact-form">
                         <form action="" className="form">
+                            <p className="mt-5">Do you have anything to tell me? I will love to hear from you :)</p>
                             <div className="name">
                                 {/* <label htmlFor="firstName">First Name</label> */}
                                 <input type="text" name="firstName" className="firstName mt-4" placeholder="First Name" tabIndex="1" required />
