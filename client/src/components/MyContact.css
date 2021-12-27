@@ -1,0 +1,96 @@
+.contact {
+    position: relative;
+    background-color: #FFFFFF;
+    height: 100vh;
+    width: 100%
+}
+
+.form {
+    text-align: left;
+    width: 60%;
+    padding: 0 3rem 0 3rem;
+}
+
+.contact-form {
+    background-color: #F8F6FF;
+    display: flex;
+    width: 70vw;
+    height: auto;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.contact-image {
+    width: 40%;
+    height: auto;
+}
+
+.contact-image>img {
+    width: 100%;
+    height: auto;
+    border-radius: 0 15px 15px 0px;
+}
+
+input {
+    height: 3rem;
+    width: 100%;
+}
+
+input,
+textarea {
+    border-width: 1px;
+    border-color: #6851DD;
+    border-radius: 7px;
+    display: grid;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 0.8rem;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: #FEBDF2;
+    border: 1px solid #FEBDF2;
+}
+
+.send {
+    width: 12rem;
+    height: 3.5rem;
+    background-color: #FEBDF2;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.send:hover {
+    background-color: #6851DD;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 850px) {
+    /* For smaller screens: */
+    .contact-image {
+        display: none;
+    }
+    .form {
+        width: 100%;
+    }
+    input {
+        height: 2rem;
+    }
+    textarea {
+        height: 6rem;
+    }
+    .send {
+        width: 8.5rem;
+        height: 2.5rem;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+}
