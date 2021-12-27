@@ -14,6 +14,15 @@
     overflow: hidden;
 }
 
+.home-burger {
+    float: right;
+    top: 2rem
+}
+
+.home-menu {
+    z-index: 1;
+}
+
 .intro {
     padding: 5rem;
     visibility: hidden;
