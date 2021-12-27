@@ -3,6 +3,7 @@
     background-color: #FFFFFF;
     height: 100%;
     width: 100%;
+    z-index: -3;
 }
 
 .form {
@@ -18,6 +19,7 @@
     height: auto;
     border-radius: 15px;
     margin: auto;
+    box-shadow: #FEBDF2;
 }
 
 .contact-image {
@@ -73,10 +75,33 @@ textarea:focus {
     color: #FFFFFF;
 }
 
+.contact-circle1,
+.contact-circle2 {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.contact-circle1 {
+    width: 35rem;
+    height: 35rem;
+    background-color: #FEBDF2;
+    left: -8vw;
+    bottom: -20vh;
+}
+
+.contact-circle2 {
+    width: 20rem;
+    height: 20rem;
+    background-color: #6851DD;
+    right: 8vw;
+    top: 10vh;
+}
+
 @media only screen and (max-width: 850px) {
     /* For smaller screens: */
     .contact {
-        padding-top: 7rem;
+        padding-top: 9rem;
     }
     .contact-image {
         display: none;
@@ -99,5 +124,16 @@ textarea:focus {
     }
     .form>p {
         font-size: 0.8rem;
+    }
+    .contact-circle1 {
+        width: 20rem;
+        height: 20rem;
+        left: -15vw;
+    }
+    .contact-circle2 {
+        width: 12rem;
+        height: 12rem;
+        right: 4vw;
+        top: 8vh;
     }
 }

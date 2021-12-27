@@ -6,7 +6,7 @@ export default function MyContact() {
     return (
         <div>
             <div className="">
-                <div className="contact">
+                <div className="contact relative">
                     <div className="contact-circle1"></div>
                     <div className="contact-circle2"></div>
                     <div className="contact-form">
