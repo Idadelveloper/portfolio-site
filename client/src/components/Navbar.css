@@ -1,0 +1,9 @@
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
