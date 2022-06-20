@@ -1,20 +1,29 @@
 {
-  "name": "y",
-  "version": "1.0.0",
-  "description": "Ida's personal website",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "keywords": [
-    "ida",
-    "delphine",
-    "meh",
-    "mbeh",
-    "idadel",
-    "idadelveloper"
-  ],
-  "author": "Ida Delphine",
-  "license": "ISC"
+    "name": "y",
+    "version": "1.0.0",
+    "description": "Ida's personal website",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "client": "cd client && npm start",
+        "dev": "concurrently -n 'server,client' -c 'red,green' \"nodemon server.js\" \"npm run client\""
+    },
+    "keywords": [
+        "ida",
+        "delphine",
+        "meh",
+        "mbeh",
+        "idadel",
+        "idadelveloper"
+    ],
+    "author": "Ida Delphine",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.27.2",
+        "concurrently": "^7.2.2",
+        "express": "^4.18.1",
+        "mongoose": "^6.4.0",
+        "morgan": "^1.10.0"
+    }
 }
