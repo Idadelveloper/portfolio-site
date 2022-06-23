@@ -1,0 +1,85 @@
+.contact-about {
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.home-contact,
+.home-about {
+    display: inline-block;
+}
+
+.contact1,
+.about1 {
+    color: transparent;
+    font-size: 13vw;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 1rem;
+    line-height: 20vh;
+    position: absolute;
+}
+
+.contact1 {
+    -webkit-text-stroke: 1px #FEBDF2;
+    left: -10vw;
+    top: -2vh;
+}
+
+.about1 {
+    -webkit-text-stroke: 1px #6851DD;
+    bottom: -1.5vh;
+    left: 49vw
+}
+
+.contact2,
+.about2 {
+    font-size: 4vw;
+    position: absolute;
+    color: #202224;
+}
+
+.contact2 {
+    left: 18vw;
+    top: 15vh;
+}
+
+.contact2:hover {
+    color: #6851DD;
+}
+
+.about2 {
+    right: 18vw;
+    top: 15vh;
+}
+
+.about2:hover {
+    color: #FEBDF2;
+}
+
+@media only screen and (max-width: 950px) {
+    /* For smaller screens */
+    .home-about,
+    .home-contact {
+        display: flex;
+        position: static;
+        height: 15vh;
+        align-items: center;
+    }
+    .contact1,
+    .about1 {
+        display: none;
+    }
+    .contact2,
+    .about2 {
+        position: static;
+        margin: auto;
+        text-align: center;
+        font-size: 6vw;
+    }
+    .contact-about {
+        align-content: space-between;
+        height: 30vh;
+    }
+}

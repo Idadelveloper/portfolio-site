@@ -1,0 +1,54 @@
+.footer {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+
+.copyright,
+.social {
+    display: inline;
+    width: 50%;
+}
+
+.copyright {
+    /* padding-right: 5vw; */
+    font-size: 1vw;
+    /* text-align: right; */
+}
+
+.social>a {
+    margin: 2vw;
+}
+
+.social>a:hover {
+    color: #6851DD;
+}
+
+@media only screen and (max-width: 640px) {
+    /* For smaller screens: */
+    .footer {
+        display: block;
+        height: 15vh;
+    }
+    .copyright,
+    .social {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .copyright {
+        text-align: center;
+        font-size: 2.5vw;
+        align-items: center;
+        height: 40%;
+    }
+    .social {
+        align-items: flex-end;
+        height: 70%;
+    }
+    .social>a {
+        margin: 4vw;
+        font-size: 0.8rem;
+    }
+}
