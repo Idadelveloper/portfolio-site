@@ -5,9 +5,9 @@ export default function NotFound() {
     return (
         <div>
             <div className="not-found">
-                <div className="circle not-found-circle1"></div>
-                <div className="circle not-found-circle2"></div>
-                <div className="circle not-found-circle3"></div>
+                <div className="not-found-circle1 absolute"></div>
+                <div className="not-found-circle2 absolute"></div>
+                <div className="not-found-circle3 absolute"></div>
                 <div className="notfound">
                     <div className="notfound-message">
                         <h1 className="oh-shoot">Oh Shoot!</h1>
