@@ -38,12 +38,11 @@ app.get('/articles', async(req, res) => {
 
 })
 
-app.get('/articles/:id', async(req, res) => {
-    const article = await Article.findById(req.params.id);
+app.get('/articles/:slug', async(req, res) => {
+
+    const slug = req.params.slug
+
+    const article = await Article.findOne({ slug: slug })
 
     res.json(article)
 })
-
-// app.listen(PORT, () => {
-//     console.log(`Server is starting at ${PORT}`)
-// })
