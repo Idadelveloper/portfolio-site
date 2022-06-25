@@ -2,8 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const path = require('path');
-const Article = require('./models/article')
-const dotenv = require("dotenv")
+const Article = require('./models/article');
+const dotenv = require("dotenv");
+const querystring = require('querystring');
 
 // initialize app
 const app = express();
@@ -32,7 +33,7 @@ app.use(morgan('tiny'));
 // app routes
 app.get('/articles', async(req, res) => {
 
-    const articles = await Article.find()
+    const articles = await Article.find().sort({ createdAt: 'desc' })
 
     res.json(articles)
 
