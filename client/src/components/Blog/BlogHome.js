@@ -36,11 +36,14 @@ export default function BlogHome() {
                     {post.description}
                     </p>
                 </div>
-                <div className="text-gray-700 mb-2 text-xs font-bold italic">Created at {post.date}</div>
+                <div className="flex justify-between px-10">
+                    <p className="text-gray-700 mb-2 text-xs font-semibold italic">Created at {new Date(post.createdAt).toLocaleDateString()}</p>
+                    <p className="text-gray-700 mb-2 text-xs font-semibold italic">Updated at {new Date(post.updatedAt).toLocaleDateString()}</p>
+                </div>
                 <div className="px-6 pt-4 pb-2 flex justify-between">
                     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mb-2">{post.category}</span>
                     
-                    <Link to={post.slug} className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 text-sm rounded-full mb-2 card-read-more">Read more</Link>
+                    <Link to={post.slug} className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 text-sm rounded-full mb-2 card-read-more flex items-center">Read more</Link>
                 </div>
             </div>
             )

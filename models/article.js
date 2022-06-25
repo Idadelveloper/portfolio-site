@@ -24,6 +24,15 @@ const articleSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    createdAt: {
+        type: Date,
+        required: true
+    },
+    updatedAt: {
+        type: Date,
+        required: true,
+        default: Date.now
+    },
     slug: {
         type: String,
         required: true,

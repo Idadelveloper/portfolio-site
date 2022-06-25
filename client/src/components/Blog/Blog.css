@@ -4,12 +4,15 @@
     padding-top: 10%;
 }
 
-.card-read-more {
+.card-read-more,
+.card-see-all {
     background-color: #6851DD;
 }
 
-.card-read-more:hover {
+.card-read-more:hover,
+.card-see-all:hover {
     background-color: #FEBDF2;
+    color: #202224;
 }
 
 
@@ -38,6 +41,35 @@ h5>strong,
 h6>strong {
     font-size: 1rem;
     font-weight: bold;
+}
+
+.blog-body>h1,
+.blog-body>h2,
+.blog-body>h3,
+.blog-body>h4,
+.blog-body>h5,
+.blog-body>h6 {
+    font-size: 1.5rem;
+}
+
+.blog-body>div>img {
+    width: 25%;
+    height: 25%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-body>div {
+    display: flex;
+    justify-content: center;
+}
+
+div img {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 ul::marker,
@@ -113,5 +145,18 @@ li>ol {
     }
     .single-img {
         display: block;
+    }
+    .blog-body>div>img {
+        width: 50%;
+        height: 50%;
+    }
+    .tits,
+    .dates {
+        display: grid;
+        text-align: center;
+        justify-content: center;
+    }
+    .card-see-all {
+        display: none;
     }
 }
