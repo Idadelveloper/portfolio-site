@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Footer.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faLinkedin, faTwitter, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons"
 
 
 export default function Footer() {
+    const [date , setDate] = useState();
+
+    const getYear = () =>  setDate(new Date().getFullYear())
+
+
+    useEffect(() => {
+        getYear();
+    }, [])
+    
     return (
         <div className="footer">
             <div className="social">
@@ -15,7 +24,7 @@ export default function Footer() {
                 <a href="https://github.com/Idadelveloper"><FontAwesomeIcon icon={faFacebook} size="2x" /></a>
             </div>
             <div className="copyright">
-                <p>Ⓒ 2021, Idadelveloper. Made with ❤️ </p>
+                <p>Ⓒ {date}, Idadelveloper. Made with ❤️ </p>
             </div>
         </div>
     )
