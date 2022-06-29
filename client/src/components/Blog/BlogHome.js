@@ -3,16 +3,21 @@ import './Blog.css'
 import image from '../../assets/image-1.jpg'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Filter from '../Filter/Filter'
 
 export default function BlogHome() {
 
     const [blogPosts, setBlogPosts] = useState([])
+    const [filtered, setFiltered] = useState([])
+    const [activeCategory, setActiveCategory] = useState("")
 
     const getArticles = () => {
         axios.get('/articles')
         .then((response) => {
             const articles = response.data
             setBlogPosts(articles)
+            // setCategories([...new Set(blogPosts.map((Val) => Val.category))])
+            setFiltered(response.data)
             console.log("Data is recieved")
         }).catch(error => console.error(`Error: ${error}`))
     }
@@ -21,8 +26,9 @@ export default function BlogHome() {
         getArticles();
     }, []);
 
+
     const displayCards = (posts) => {
-        if (posts.length == 0) return null;
+        if (!posts.length) return (<h1>Can't retrieve posts now</h1>);
 
         return posts.map((post, index) =>  (
             <div key={index} className="w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-lg mb-20">
@@ -52,8 +58,19 @@ export default function BlogHome() {
 
 
   return (
-    <div className="blog-home pt-40 px-20 grid justify-center grid lg:grid-cols-3 gap-12 lg:gap-0">
-        {displayCards(blogPosts)}
-    </div>
+      <div className="single-blog">
+        <h3 className="text-3xl font-semibold p-5">Welcome to my blog!!!</h3>
+        <p className="blog-more">Checkout more of my technical posts on <a href="https://medium.com/@idadelveloper">Medium</a>, <a href="https://idadelveloper.hashnode.dev/">Hashnode</a>, and <a href="https://dev.to/idadelveloper">Dev</a>.</p>
+        <div className="categories flex justify-center py-10 px-3 categories">
+            <h6 className="">Filter by</h6>
+            <Filter blogPosts={blogPosts} setFiltered={setFiltered} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+        </div>
+        
+
+        <div className="blog-home px-20 grid justify-center grid lg:grid-cols-3 gap-12 lg:gap-0">
+            {displayCards(filtered)}
+        </div>
+      </div>
+    
   )
 }

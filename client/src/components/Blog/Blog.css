@@ -15,6 +15,28 @@
     color: #202224;
 }
 
+.blog-more>a {
+    color: #6851DD;
+    text-decoration: underline;
+    text-decoration-color: #FEBDF2;
+    font-weight: bold;
+}
+
+.blog-more>a:hover {
+    color: #FEBDF2;
+    text-decoration-color: #6851DD;
+    font-weight: bolder;
+}
+
+.categories {
+    align-items: center;
+}
+
+.categories>h6 {
+    font-weight: 500;
+    margin-right: 2rem;
+}
+
 
 /* Blog Single Styles */
 
@@ -117,10 +139,15 @@ li>ol {
     .blog-home {
         padding-left: 5%;
         padding-right: 5%;
-        padding-top: 30%;
     }
     .card-image {
         display: block;
+    }
+    .categories {
+        display: grid;
+    }
+    .categories>h6 {
+        margin: 0;
     }
     /* Blog single styles */
     .single-blog {

@@ -1,0 +1,39 @@
+.filter-container button {
+    margin-right: 2rem;
+    min-width: 5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #FEBDF2;
+    color: #6851DD;
+    border-radius: 1rem;
+    border: 2px solid #6851DD;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button.active {
+    background: #6851DD;
+    color: #FEBDF2;
+}
+
+@media only screen and (max-width: 1000px) {
+    .filter-container button {
+        min-width: 3rem;
+        padding: 0.4rem 0.8rem;
+        border: none;
+        background: #FEBDF2;
+        color: #6851DD;
+        border-radius: 0.8rem;
+        border: 1px solid #6851DD;
+        font-size: 0.8rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .filter-container {
+        display: grid;
+        align-items: center;
+    }
+    .filter-container>button {
+        margin: 10px auto;
+    }
+}
