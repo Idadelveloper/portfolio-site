@@ -4,6 +4,7 @@ import image from '../../assets/image-1.jpg'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Filter from '../Filter/Filter'
+import { motion } from 'framer-motion/dist/framer-motion'
 
 export default function BlogHome() {
 
@@ -31,7 +32,7 @@ export default function BlogHome() {
         if (!posts.length) return (<h1>Can't retrieve posts now</h1>);
 
         return posts.map((post, index) =>  (
-            <div key={index} className="w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-lg mb-20">
+            <motion.div layout key={index} className="w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-lg mb-20">
                 <img className="w-full card-image" src={post.image} alt="Image for this post" onError={({ currentTarget }) => {
                     currentTarget.onerror = null;
                     currentTarget.src=image;
@@ -51,7 +52,7 @@ export default function BlogHome() {
                     
                     <Link to={post.slug} className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 text-sm rounded-full mb-2 card-read-more flex items-center">Read more</Link>
                 </div>
-            </div>
+            </motion.div>
             )
         )
     }
@@ -67,9 +68,9 @@ export default function BlogHome() {
         </div>
         
 
-        <div className="blog-home px-20 grid justify-center grid lg:grid-cols-3 gap-12 lg:gap-0">
+        <motion.div layout className="blog-home px-20 grid justify-center grid lg:grid-cols-3 gap-12 lg:gap-0">
             {displayCards(filtered)}
-        </div>
+        </motion.div>
       </div>
     
   )
