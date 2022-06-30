@@ -7,20 +7,23 @@ export default function Services() {
     return (
         <div className="parent pt-5 mb-10">
             <div id="services" className="services">
-                <h2 className="title">Services/Interests</h2>
+                <h2 className="title">Skills</h2>
                 <Marquee pauseOnHover="true">
-                    <div className="service web">Web Development</div>
-                    <div className="service ds">Data Science</div>
-                    <div className="service  devops">DevOps</div>
-                    <div className="service opensource">Open Source</div>
-                    
+                    <div className="service web">Python</div>
+                    <div className="service ds">JavaScript</div>
+                    <div className="service  devops">HTML/CSS</div>
+                    <div className="service opensource">Golang</div>
+                    <div className="service web">Rust</div>
+                    <div className="service  devops">Dart</div>
                 </Marquee>
                 <br />
                 <Marquee direction="right" pauseOnHover="true" >
                     <div className="service community">Community</div>
                     <div className="service blockchain">Blockchain</div>
-                    <div className="service mobile">Mobile Development</div>
-                    <div className="service ml-ai">ML & AI</div>
+                    <div className="service mobile">React</div>
+                    <div className="service ml-ai">Flutter</div>
+                    <div className="service community">Flask</div>
+                    <div className="service blockchain">Django</div>
                 </Marquee>
             </div>
         </div>
