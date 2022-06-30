@@ -32,8 +32,51 @@ app.use(morgan('tiny'));
 
 // app routes
 app.get('/articles', async(req, res) => {
+    // let query = {}
+    // if (req.query.category) {
+    //     query.category = req.query.category
+    // }
+    // if (req.query.keyword) {
+    //     query.$or = [
+    //         { "title": { $regex: req.query.keyword, $options: 'i' } },
+    //         { "description": { $regex: req.query.keyword, $options: 'i' } }
+    //     ]
+    // }
+    // const articles = await Article.find(query)
+    //     .populate('category')
+    //     .skip(0)
+    //     .limit(9)
+    //     .sort({ createdAt: 'desc' })
+
+
+    // const page = parseInt(req.query.page)
+    // const limit = parseInt(req.query.limit)
+
+    // const startIndex = (page - 1) * limit
+    // const endIndex = page * limit
+
+    // const articles = await Article.find().sort({ createdAt: 'desc' })
+
+    // const results = {}
+
+    // if (endIndex < articles.length) {
+    //     results.next = {
+    //         page: page + 1,
+    //         limit: limit
+    //     }
+    // }
+
+    // if (startIndex > 0) {
+    //     results.previous = {
+    //         page: page - 1,
+    //         limit: limit
+    //     }
+    // }
+
+    // results.results = articles.slice(startIndex, endIndex)
 
     const articles = await Article.find().sort({ createdAt: 'desc' })
+
 
     res.json(articles)
 

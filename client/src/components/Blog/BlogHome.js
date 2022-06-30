@@ -5,20 +5,24 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Filter from '../Filter/Filter'
 import { motion } from 'framer-motion/dist/framer-motion'
+import Loading from '../Loading/Loading'
 
 export default function BlogHome() {
 
     const [blogPosts, setBlogPosts] = useState([])
     const [filtered, setFiltered] = useState([])
     const [activeCategory, setActiveCategory] = useState("")
+    const [isLoading, setIsLoading] = useState(false);
 
     const getArticles = () => {
+        setIsLoading(true)
         axios.get('/articles')
         .then((response) => {
             const articles = response.data
             setBlogPosts(articles)
             // setCategories([...new Set(blogPosts.map((Val) => Val.category))])
             setFiltered(response.data)
+            setIsLoading(false)
             console.log("Data is recieved")
         }).catch(error => console.error(`Error: ${error}`))
     }
@@ -57,20 +61,29 @@ export default function BlogHome() {
         )
     }
 
+    const getData = () => {
+        return (
+            <div>
+                <div className="categories flex justify-center py-10 px-3 categories">
+                    <h6 className="">Filter by</h6>
+                    <Filter blogPosts={blogPosts} setFiltered={setFiltered} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+                </div>
+
+                <motion.div layout className="blog-home px-20 grid justify-center grid lg:grid-cols-3 gap-12 lg:gap-0">
+                    {isLoading ? <Loading /> : displayCards(filtered)}
+                </motion.div>
+            </div>
+
+        )
+    }
+
 
   return (
       <div className="single-blog">
         <h3 className="text-3xl font-semibold p-5">Welcome to my blog!!!</h3>
         <p className="blog-more">Checkout more of my technical posts on <a href="https://medium.com/@idadelveloper">Medium</a>, <a href="https://idadelveloper.hashnode.dev/">Hashnode</a>, and <a href="https://dev.to/idadelveloper">Dev</a>.</p>
-        <div className="categories flex justify-center py-10 px-3 categories">
-            <h6 className="">Filter by</h6>
-            <Filter blogPosts={blogPosts} setFiltered={setFiltered} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
-        </div>
         
-
-        <motion.div layout className="blog-home px-20 grid justify-center grid lg:grid-cols-3 gap-12 lg:gap-0">
-            {displayCards(filtered)}
-        </motion.div>
+        { isLoading ? <Loading /> : getData() }
       </div>
     
   )
