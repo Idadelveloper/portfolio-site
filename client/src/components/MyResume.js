@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 
 export default function MyResume() {
@@ -20,12 +20,12 @@ export default function MyResume() {
                         <h6>Bamenda, North West Region, Cameroon</h6>
                     </div>
                     <div className="contact-links">
-                        <span><a href="https://github.com/Idadelveloper" target="_blank"><FontAwesomeIcon icon={faEnvelope} size="1x" className="mr-2" />idadelveloper(at)gmail.com</a></span>
-                        <span><a href="https://github.com/Idadelveloper" target="_blank"><FontAwesomeIcon icon={faGlobe} size="1x" className="mr-2" />idadelveloper.com</a></span>
+                        <span><a href="mailto:idadelveloper@gmail.com" target="_blank"><FontAwesomeIcon icon={faEnvelope} size="1x" className="mr-2" />idadelveloper(at)gmail.com</a></span>
+                        <span><a href="https://idadelveloper.com" target="_blank"><FontAwesomeIcon icon={faGlobe} size="1x" className="mr-2" />idadelveloper.com</a></span>
                         <span><a href="https://github.com/Idadelveloper" target="_blank"><FontAwesomeIcon icon={faGithub} size="1x" className="mr-2" />idadelveloper</a></span>
-                        <span><a href="https://github.com/Idadelveloper" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="1x" className="mr-2"  />idadelveloper</a></span>
-                        <span><a href="https://github.com/Idadelveloper" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="1x" className="mr-2" />idadelveloper</a></span>
-                        <span><a href="https://github.com/Idadelveloper" target="_blank"><FontAwesomeIcon icon={faTwitter} size="1x" className="mr-2" />idadelveloper</a></span>
+                        <span><a href="https://www.linkedin.com/in/idadelveloper/" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="1x" className="mr-2"  />idadelveloper</a></span>
+                        <span><a href="https://facebook.com/idadelveloper" target="_blank"><FontAwesomeIcon icon={faFacebook} size="1x" className="mr-2" />idadelveloper</a></span>
+                        <span><a href="https://twitter.com/idadelveloper" target="_blank"><FontAwesomeIcon icon={faTwitter} size="1x" className="mr-2" />idadelveloper</a></span>
                     </div>
 
                 </div>
