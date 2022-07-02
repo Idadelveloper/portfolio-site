@@ -3,6 +3,7 @@
     font-weight: 600;
     position: absolute;
     color: #202224;
+    bottom: 5%;
     /* background-color: aqua; */
 }
 
@@ -24,8 +25,11 @@
 }
 
 .intro {
-    padding: 5rem;
-    visibility: hidden;
+    position: absolute;
+    top: 30%;
+    width: 40%;
+    right: 10%;
+    color: #3F4E4F;
 }
 
 img {
@@ -42,7 +46,7 @@ img {
 .img2 {
     height: 50rem;
     position: absolute;
-    bottom: -90vh;
+    bottom: 0;
     right: 0;
 }
 
@@ -56,8 +60,8 @@ img {
     height: 27rem;
     background-color: #6851DD;
     position: absolute;
-    right: 25%;
-    top: -80%;
+    right: 15%;
+    top: -25%;
     display: inline-block;
 }
 
@@ -68,7 +72,8 @@ img {
     position: absolute;
     display: inline-block;
     right: 40%;
-    bottom: -380%;
+    bottom: -10%;
+    overflow: hidden;
 }
 
 
@@ -98,9 +103,28 @@ img {
     /* For mobile phones: */
     .idadel {
         font-size: 6rem;
+        position: relative !important;
+        display: block;
     }
-    img {
-        display: none;
+    .intro {
+        visibility: visible;
+        position: relative !important;
+        display: block;
+        width: auto;
+        top: 0;
+        right: 0;
+        color: #202224;
+    }
+    .banner {
+        height: auto !important;
+        display: grid;
+    }
+    .banner>div {
+        position: relative !important;
+        display: grid;
+    }
+    .banner>div>img {
+        display: none !important;
     }
     .circle1 {
         width: 27rem;
@@ -114,12 +138,12 @@ img {
         top: 10rem;
         right: 10%;
     }
-    .intro {
+    /* .intro {
         position: absolute;
         visibility: visible;
         padding: 7rem;
         top: 20rem;
-    }
+    } */
 }
 
 
@@ -145,9 +169,9 @@ img {
         top: 20rem;
         right: 10%;
     }
-    .intro {
+    /* .intro {
         position: absolute;
         visibility: visible;
         top: 15rem;
-    }
+    } */
 }

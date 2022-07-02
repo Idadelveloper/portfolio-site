@@ -14,7 +14,7 @@ export default function Portfolio() {
                         <h2 className="text2">Projects</h2>
                     </div>
                     <h1 className="text3">Port<br />folio</h1>
-                    <h2 className="text4">Portfolio</h2>
+                    <h2 className="text4">Projects</h2>
                     <img src={portfolio} alt=""className="image" />
                     
                 </div>
