@@ -8,7 +8,7 @@ const Menu = ({ open, ...props }) => {
   return (
       <div>
         
-        <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
+        <StyledMenu open={open} aria-hidden={!isHidden} {...props} className="menu">
             <div className="menu-circle"></div>
             <a href="/" tabIndex={tabIndex}>Home</a>
             <a href="/about" tabIndex={tabIndex} >About</a>

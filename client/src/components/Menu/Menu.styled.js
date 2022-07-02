@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import SideBackground from '../../assets/3d-left.png'
 
 export const StyledMenu = styled.nav `
-  display: flex;
+  display: grid;
+  z-index: 1;
   width: 100%;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   background: ${({ theme }) => theme.primaryPurple};
   background-image: url(${SideBackground});
