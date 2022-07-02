@@ -1,0 +1,43 @@
+[{
+        "id": 1,
+        "name": "My Portfolio Site",
+        "description": "My personal website about myself, skills and projects I have worked on",
+        "image": "portfolio.jpg",
+        "repo": "https://github.com/Idadelveloper/portfolio-site"
+    },
+    {
+        "id": 2,
+        "name": "Safe Herven",
+        "description": "A mobile application that provides support to victims/survivors of gender based violence and harmful practices.",
+        "image": "safeherven.png",
+        "repo": "https://github.com/Idadelveloper/safeherven_app"
+    },
+    {
+        "id": 3,
+        "name": "Flow",
+        "description": "A mobile application that helps people find clean water using Google maps.",
+        "image": "flowapp.jpg",
+        "repo": "https://github.com/Developer-Student-Clubs-UBa/Flow"
+    },
+    {
+        "id": 4,
+        "name": "OAuth2 Slack App",
+        "description": "A flask slack app that that when granted authorization, the app can send messages on your behalf",
+        "image": "none.png",
+        "repo": "https://github.com/Idadelveloper/OAuth2-Slack-App"
+    },
+    {
+        "id": 5,
+        "name": "Portfolio CMS",
+        "description": "Content management system of my portfolio website where I write my blogposts and feed them to MondoDB",
+        "image": "blog_cms.png",
+        "repo": "https://github.com/Idadelveloper/portfolio-cms"
+    },
+    {
+        "id": 6,
+        "name": "Node JS Blog",
+        "description": "Simple blog app site built with node.js and mongodb",
+        "image": "nodeblog.png",
+        "repo": "https://github.com/Idadelveloper/simple-node-blog"
+    }
+]

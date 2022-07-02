@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Blog.css'
-import image from '../../assets/image-1.jpg'
+import image from '../../assets/image-2.jpg'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Filter from '../Filter/Filter'

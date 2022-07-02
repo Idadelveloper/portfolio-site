@@ -1,0 +1,18 @@
+.projects {
+    padding-top: 5rem;
+}
+
+.projects>p>a {
+    color: #6851DD;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.projects>p>a:hover {
+    color: #FEBDF2;
+}
+
+.github-btn {
+    background-color: #6851DD;
+    border-radius: 1rem;
+}

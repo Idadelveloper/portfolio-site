@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
-import image from '../../assets/image-1.jpg'
+import image from '../../assets/image-2.jpg'
 import './Blog.css'
 import parse from 'html-react-parser'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
