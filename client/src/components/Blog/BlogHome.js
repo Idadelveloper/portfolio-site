@@ -81,7 +81,7 @@ export default function BlogHome() {
   return (
       <div className="single-blog">
         <h3 className="text-3xl font-semibold p-5">Welcome to my blog!!!</h3>
-        <p className="blog-more">Checkout more of my technical posts on <a href="https://medium.com/@idadelveloper">Medium</a>, <a href="https://idadelveloper.hashnode.dev/">Hashnode</a>, and <a href="https://dev.to/idadelveloper">Dev</a>.</p>
+        <p className="blog-more">Checkout more of my technical posts on <a href="https://medium.com/@idadelveloper" target="_blank">Medium</a>, <a href="https://idadelveloper.hashnode.dev/" target="_blank">Hashnode</a>, and <a href="https://dev.to/idadelveloper" target="_blank">Dev</a>.</p>
         
         { isLoading ? <Loading /> : getData() }
       </div>

@@ -17,11 +17,11 @@ export default function Footer() {
     return (
         <div className="footer">
             <div className="social">
-                <a href="https://github.com/Idadelveloper"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
-                <a href="https://github.com/Idadelveloper"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
-                <a href="https://github.com/Idadelveloper"><FontAwesomeIcon icon={faTwitter} size="2x" /></a>
-                <a href="https://github.com/Idadelveloper"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
-                <a href="https://github.com/Idadelveloper"><FontAwesomeIcon icon={faFacebook} size="2x" /></a>
+                <a href="https://github.com/Idadelveloper" target="_blank"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
+                <a href="https://github.com/Idadelveloper" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
+                <a href="https://github.com/Idadelveloper" target="_blank"><FontAwesomeIcon icon={faTwitter} size="2x" /></a>
+                <a href="https://github.com/Idadelveloper" target="_blank"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
+                <a href="https://github.com/Idadelveloper" target="_blank"><FontAwesomeIcon icon={faFacebook} size="2x" /></a>
             </div>
             <div className="copyright">
                 <p>Ⓒ {date}, Idadelveloper. Made with ❤️ </p>
