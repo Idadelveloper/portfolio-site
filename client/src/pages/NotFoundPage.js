@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import NotFound from '../components/NotFound'
+import Navbar from '../components/Navbar/Navbar'
+import NotFound from '../components/Error/NotFound'
 
 export default function NotFoundPage() {
     return (

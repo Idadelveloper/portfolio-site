@@ -1,15 +1,15 @@
 import React, { useState, useRef } from 'react';
 import './Banner.css'
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from '../global';
-import { theme } from '../theme';
+import { GlobalStyles } from '../../global';
+import { theme } from '../../theme';
 
-import LeftBackground from '../assets/3d-top-right.png'
-import RightBackground from '../assets/3d-bottom-left.png'
+import LeftBackground from '../../assets/3d-top-right.png'
+import RightBackground from '../../assets/3d-bottom-left.png'
 
-import Menu from './Menu/Menu';
-import Burger from './Burger/Burger';
-import { useOnClickOutside } from '../hooks';
+import Menu from '../Menu/Menu';
+import Burger from '../Burger/Burger';
+import { useOnClickOutside } from '../../hooks';
 
 export default function Banner() {
     const [open, setOpen] = useState(false);

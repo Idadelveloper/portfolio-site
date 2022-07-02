@@ -1,7 +1,7 @@
 import React from 'react'
-import MyContact from '../components/MyContact'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import MyContact from '../components/Contact/MyContact'
+import Footer from '../components/Footer/Footer'
+import Navbar from '../components/Navbar/Navbar'
 
 export default function Contact() {
     return (

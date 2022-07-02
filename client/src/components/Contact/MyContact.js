@@ -1,6 +1,6 @@
 import React from 'react'
 import './MyContact.css'
-import contactImage from '../assets/3d-center-purple.png'
+import contactImage from '../../assets/3d-center-purple.png'
 
 export default function MyContact() {
     return (

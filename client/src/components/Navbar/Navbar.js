@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import './Navbar.css'
-import Menu from './Menu/Menu'
-import Burger from './Burger/Burger'
-import { useOnClickOutside } from '../hooks'
+import Menu from '../Menu/Menu'
+import Burger from '../Burger/Burger'
+import { useOnClickOutside } from '../../hooks'
 
 export default function Navbar(props) {
     const [open, setOpen] = useState(false);

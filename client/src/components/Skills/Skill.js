@@ -1,12 +1,12 @@
 import React from 'react'
-import './Services.css'
+import './Skills.css'
 import '../../index.css'
 import Marquee from "react-fast-marquee";
 
-export default function Services() {
+export default function Skill() {
     return (
         <div className="parent pt-5 mb-10">
-            <div id="services" className="services">
+            <div id="skills" className="services">
                 <h2 className="title">Skills</h2>
                 <Marquee pauseOnHover="true">
                     <div className="service web">Python</div>
