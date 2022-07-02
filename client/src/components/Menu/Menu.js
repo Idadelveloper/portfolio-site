@@ -12,8 +12,8 @@ const Menu = ({ open, ...props }) => {
             <div className="menu-circle"></div>
             <a href="/" tabIndex={tabIndex}>Home</a>
             <a href="/about" tabIndex={tabIndex} >About</a>
-            <a href="/projects" tabIndex={tabIndex}>Portfolio</a>
-            <a href="#services" tabIndex={tabIndex}>Services</a>
+            <a href="/projects" tabIndex={tabIndex}>Projects</a>
+            <a href="/resume" tabIndex={tabIndex}>Resume</a>
             <a href="/blog" tabIndex={tabIndex}>Blog</a>
             <a href="/contact" tabIndex={tabIndex}>Contact</a>
         </StyledMenu>

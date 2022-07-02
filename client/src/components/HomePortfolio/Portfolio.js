@@ -11,7 +11,7 @@ export default function Portfolio() {
                 <div className="portfolio grid grid-cols-1 md:grid-cols-2">
                     <div className="text">
                         <h1 className="text1">Portfo<br />lio</h1>
-                        <h2 className="text2">Portfolio</h2>
+                        <h2 className="text2">Projects</h2>
                     </div>
                     <h1 className="text3">Port<br />folio</h1>
                     <h2 className="text4">Portfolio</h2>
