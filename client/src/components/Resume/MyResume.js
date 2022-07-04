@@ -44,6 +44,25 @@ export default function MyResume() {
                     </div>
                     
                     <div className="experiences">
+                    <div className="exp mb-3">
+                        <div className="experience mb-2">
+                                <div>
+                                    <h4 className="ex-com mb-1">Outreachy Internship</h4>
+                                    <h5 className="ex-pos">UNICEF Innovation mentor</h5>
+                                </div>
+                                <div>
+                                    <h6 className="ex-location mb-1">Remote</h6>
+                                    <h6 className="ex-date">Mar 2022-Aug 2022</h6>
+                                </div>
+                            </div>
+                            <div className="tasks pl-10">
+                                <ul>
+                                    <li>Support and guide new contributors contribut to the UNICEF open source inventory</li>
+                                    <li>Mentor and assist the intern make open source contributions towards improving the UI/UX of the UNICEF open-source inventory website.</li>
+                                </ul>
+                            </div>
+                        </div>
+
                         <div className="exp mb-3">
                             <div className="experience mb-2">
                                 <div>
@@ -116,6 +135,10 @@ export default function MyResume() {
                     </div>
                     <div className="certification">
                         <div className="cert mb-2">
+                            <p className="cert-name">Jun 2022 - <b>Generation Google Scholarship</b> , <a href="https://drive.google.com/file/d/1do9u9F4Xm-U3wAzgvAGLHt0tQZI3czsO/view">Generation Google Scholarship, EMEA, for Women in Computer Science</a></p>
+                            <p className="cert-giver">Google</p>
+                        </div>
+                        <div className="cert mb-2">
                             <p className="cert-name">Aug 2021 - <b>Top 10 Finalist</b> , <a href="https://drive.google.com/file/d/1t52lP5K6TR13GT5pcGLcg6JKMxURREWJ/view">GDSC Solution Challenge Certificate of Recognition</a></p>
                             <p className="cert-giver">Google Developers</p>
                         </div>
@@ -138,11 +161,11 @@ export default function MyResume() {
                     
                     <div className="languages mb-3 mt-2">
                         <h4 className="font-normal uppercase">Languages</h4>
-                        <p>Python | JavaScript | Java | Dart | C++ | HTML | CSS</p>
+                        <p>Python | JavaScript | Java | Dart | C++ | HTML | CSS | Golang | Rust</p>
                     </div>
                     <div className="technologies">
                         <h4 className="font-normal uppercase">Technologies</h4>
-                        <p>Git | Github | Linux | Jupyter Notebooks | Numpy | Pandas | Tkinter | Bootstrap | Django | Flutter | React</p>
+                        <p>Git | Github | Linux | Jupyter Notebooks | Numpy | Pandas | Tkinter | Bootstrap | Django | Flutter | React | Flask</p>
                     </div>
                 </div>
 
