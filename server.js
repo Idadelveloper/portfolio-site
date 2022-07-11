@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 
 // initialize app
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 dotenv.config()
 
 // connect to mongodb
@@ -29,6 +29,9 @@ mongoose.connection.on('connected', () => {
 // Log http requests
 app.use(morgan('tiny'));
 
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+
 // app routes
 app.get('/articles', async(req, res) => {
     const articles = await Article.find().sort({ createdAt: 'desc' })
@@ -40,4 +43,16 @@ app.get('/articles/:slug', async(req, res) => {
     const article = await Article.findOne({ slug: slug })
 
     res.json(article)
+})
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+
+app.get('/home', function(req, res) {
+    res.redirect('/')
+})
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
 })

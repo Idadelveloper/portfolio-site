@@ -37,7 +37,7 @@
 }
 
 .image:hover {
-    opacity: 85%;
+    opacity: 0.85;
 }
 
 .text2:hover {
