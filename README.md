@@ -24,4 +24,11 @@ REACT_APP_EMAIL_PUBLIC_KEY=
 - Your frontend is at `http://localhost:3000`
 
 
+## Building the site for deployment
+- Go to the client directory: `cd client`
+- Run `npm run build`
+- Go back to the root directory: `cd ..`
+- Run `node server.js`
+- The site is at port 3000
+
 
