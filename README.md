@@ -13,7 +13,7 @@ DB_PASSWORD=
 
 
 ## Running the client
-- Run `npm install
+- Run `npm install`
 - Create a .env file. Signup to [EmailJS](https://www.emailjs.com/) and create a project.
 ```
 REACT_APP_EMAIL_SERVICE_ID=
