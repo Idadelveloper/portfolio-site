@@ -57,7 +57,7 @@ export default function MyResume() {
                             </div>
                             <div className="tasks pl-10">
                                 <ul>
-                                    <li>Support and guide new contributors contribut to the UNICEF open source inventory</li>
+                                    <li>Support and guide new contributors contribute to the UNICEF open source inventory</li>
                                     <li>Mentor and assist the intern make open source contributions towards improving the UI/UX of the UNICEF open-source inventory website.</li>
                                 </ul>
                             </div>

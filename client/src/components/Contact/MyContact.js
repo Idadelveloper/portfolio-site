@@ -5,10 +5,10 @@ import emailjs from '@emailjs/browser';
 import { useAlert } from 'react-alert'
 
 export default function MyContact() {
-    const[name, setName] = useState("");
-    const[subject, setSubject] = useState("");
-    const[email, setEmail] = useState("");
-    const[message, setMessage] = useState("");
+    const [name, setName] = useState("");
+    const [subject, setSubject] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
 
     const form = useRef();
     const alert = useAlert();
@@ -37,13 +37,13 @@ export default function MyContact() {
                         <form action="" className="form" ref={form} onSubmit={sendEmail}>
                             <p className="mt-5">Do you have anything to tell me? I will love to hear from you :)</p>
                             
-                            <input type="text" name="name" className="name mt-4" placeholder="Full Name" tabIndex="1" defaultValue={name} onChange={(e) => setName(e.target.value)} required />
+                            <input type="text" name="name" className="name mt-4" placeholder="Full Name" tabIndex="1" value={name} onChange={(e) => setName(e.target.value)} required />
 
-                            <input type="text" name="subject" className="subject" placeholder="Subject" tabIndex="2" defaultValue={subject} onChange={(e) => setSubject(e.target.value)} required />
+                            <input type="text" name="subject" className="subject" placeholder="Subject" tabIndex="2" value={subject} onChange={(e) => setSubject(e.target.value)} required />
 
-                            <input type="email" name="email" id="email" className="email" placeholder="Email" tabIndex="3" defaultValue={email} onChange={(e) => setEmail(e.target.value)} required />
+                            <input type="email" name="email" id="email" className="email" placeholder="Email" tabIndex="3" value={email} onChange={(e) => setEmail(e.target.value)} required />
 
-                            <textarea name="message" id="message" placeholder="Message" cols="30" rows="10" defaultValue={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
+                            <textarea name="message" id="message" placeholder="Message" cols="30" rows="10" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
 
                             <button type="submit" className="send mb-4">Send</button>
                             
