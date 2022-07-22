@@ -2,7 +2,7 @@ name: Rebuild the frontend on the server
 on:
   push:
     branches:
-    - testing
+    - main
 jobs:
   build:
     name: Build
