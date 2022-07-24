@@ -24,6 +24,6 @@ jobs:
           cd client
           rm -rf build
           yarn install
-          yarn build
+          NODE_OPTIONS=--openssl-legacy-provider yarn build
           cp -r build/. /var/www/html/
           
