@@ -12,10 +12,9 @@ export default function BlogHome() {
     const [blogPosts, setBlogPosts] = useState([])
     const [filtered, setFiltered] = useState([])
     const [activeCategory, setActiveCategory] = useState("")
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     const getArticles = () => {
-        setIsLoading(true)
         axios.get('/articles')
         .then((response) => {
             const articles = response.data
@@ -30,6 +29,7 @@ export default function BlogHome() {
     useEffect(() => {
         getArticles();
     }, []);
+
 
 
     const displayCards = (posts) => {
@@ -72,6 +72,7 @@ export default function BlogHome() {
                 <motion.div layout className="blog-home px-20 grid justify-center grid lg:grid-cols-3 gap-12 lg:gap-0">
                     {isLoading ? <Loading /> : displayCards(filtered)}
                 </motion.div>
+
             </div>
 
         )
@@ -82,9 +83,9 @@ export default function BlogHome() {
       <div className="single-blog">
         <h3 className="text-3xl font-semibold p-5">Welcome to my blog!!!</h3>
         <p className="blog-more">Checkout more of my technical posts on <a href="https://medium.com/@idadelveloper" target="_blank">Medium</a>, <a href="https://idadelveloper.hashnode.dev/" target="_blank">Hashnode</a>, and <a href="https://dev.to/idadelveloper" target="_blank">Dev</a>.</p>
-        
         { isLoading ? <Loading /> : getData() }
       </div>
     
   )
 }
+
