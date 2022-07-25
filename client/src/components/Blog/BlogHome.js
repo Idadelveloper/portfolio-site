@@ -35,7 +35,7 @@ export default function BlogHome() {
     const displayCards = (posts) => {
         if (!posts.length) return (<h1>Can't retrieve posts now</h1>);
 
-        return posts.map((post, index) =>  (
+        return posts?.map((post, index) =>  (
             <motion.div layout key={index} className="w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-lg mb-20">
                 <img className="w-full card-image" src={post?.image} alt="Image for this post" onError={({ currentTarget }) => {
                     currentTarget.onerror = null;
