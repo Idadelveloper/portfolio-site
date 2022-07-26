@@ -5,6 +5,7 @@ import Filter from '../Filter/Filter'
 import { motion } from 'framer-motion/dist/framer-motion'
 import Loading from '../Loading/Loading'
 import Posts from './Posts'
+const dotenv = require("dotenv");
 
 export default function BlogHome() {
 
@@ -13,20 +14,14 @@ export default function BlogHome() {
     const [activeCategory, setActiveCategory] = useState("")
     const [isLoading, setIsLoading] = useState(true);
 
-
-    const filteredCallback = useCallback((val) => {
-        setFiltered(val)
-        setIsLoading(false)
-    }, [isLoading, filtered])
-
     const getArticles = () => {
-        axios.get('/articles')
+        const url = process.env.REACT_APP_DOMAIN + ':' + process.env.REACT_APP_SERVER_PORT + '/articles'
+        axios.get(url)
         .then((response) => {
             const articles = response.data
             setBlogPosts(articles)
-            // setCategories([...new Set(blogPosts.map((Val) => Val.category))])
-            filteredCallback(response.data)
-            console.log(filtered)
+            setFiltered(response.data)
+            setIsLoading(false)
             console.log("Data is recieved")
         }).catch(error => console.error(`Error: ${error}`))
     }
@@ -60,7 +55,6 @@ export default function BlogHome() {
       <div className="single-blog">
         <h3 className="text-3xl font-semibold p-5">Welcome to my blog!!!</h3>
         <p className="blog-more">Checkout more of my technical posts on <a href="https://medium.com/@idadelveloper" target="_blank">Medium</a>, <a href="https://idadelveloper.hashnode.dev/" target="_blank">Hashnode</a>, and <a href="https://dev.to/idadelveloper" target="_blank">Dev</a>.</p>
-        {console.log(filtered)}
         { isLoading ? <Loading /> : getData() }
       </div>
     
