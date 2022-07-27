@@ -12,7 +12,8 @@ export default function BlogSingle() {
     const [singlePost, setSinglePost] = useState({})
 
     const getSinglePost = () => {
-        axios.get(`/articles/${slug}`)
+        const url = `https://${process.env.REACT_APP_DOMAIN}:${process.env.REACT_APP_SERVER_PORT}/articles/${slug}`
+        axios.get(url)
         .then((response) => {
             const article = response.data
             setSinglePost(article)
