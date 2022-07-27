@@ -4,11 +4,16 @@ const morgan = require('morgan');
 const path = require('path');
 const Article = require('./models/article');
 const dotenv = require("dotenv");
+const cors = require("cors");
 
 // initialize app
 const app = express();
 const PORT = process.env.PORT || 3000;
 dotenv.config()
+
+// app.options("*", cors({ origin: `http://${process.env.DOMAIN}:${process.env.PORT}`, optionsSuccessStatus: 200 }))
+// app.use(cors({ origin: `http://${process.env.DOMAIN}:${process.env.PORT}`, optionsSuccessStatus: 200 }));
+app.use(cors())
 
 // connect to mongodb
 const MONGODB_URI = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@portfoliodb.n5g0z.mongodb.net/?retryWrites=true&w=majority`;
@@ -28,7 +33,6 @@ mongoose.connection.on('connected', () => {
 
 // Log http requests
 app.use(morgan('tiny'));
-
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 

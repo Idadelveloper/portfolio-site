@@ -39,8 +39,8 @@
         "web-vitals": "^1.0.1"
     },
     "scripts": {
-        "start": "SET NODE_OPTIONS=--openssl-legacy-provider && craco start",
-        "build": "SET NODE_OPTIONS=--openssl-legacy-provider && craco build",
+        "start": "set NODE_OPTIONS=--openssl-legacy-provider && craco start",
+        "build": "set NODE_OPTIONS=--openssl-legacy-provider && craco build",
         "test": "craco test",
         "eject": "react-scripts eject"
     },
@@ -67,5 +67,5 @@
         "postcss": "^7.0.39",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
     },
-    "proxy": "http://localhost:8000"
+    "proxy": "http://idadelveloper.com:3000"
 }
