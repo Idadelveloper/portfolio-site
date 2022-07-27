@@ -20,6 +20,7 @@
     "author": "Ida Delphine",
     "license": "ISC",
     "dependencies": {
+        "body-parser": "^1.20.0",
         "concurrently": "^7.2.2",
         "cors": "^2.8.5",
         "dotenv": "^16.0.1",

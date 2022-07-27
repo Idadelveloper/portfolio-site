@@ -5,15 +5,25 @@ const path = require('path');
 const Article = require('./models/article');
 const dotenv = require("dotenv");
 const cors = require("cors");
+const https = require('https');
+const fs = require('fs');
+const bodyParser = require("body-parser");
+
+const options = {
+    key: fs.readFileSync('key.pem'),
+    cert: fs.readFileSync('cert.pem')
+};
 
 // initialize app
 const app = express();
 const PORT = process.env.PORT || 3000;
 dotenv.config()
 
-// app.options("*", cors({ origin: `http://${process.env.DOMAIN}:${process.env.PORT}`, optionsSuccessStatus: 200 }))
-// app.use(cors({ origin: `http://${process.env.DOMAIN}:${process.env.PORT}`, optionsSuccessStatus: 200 }));
 app.use(cors())
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+
 
 // connect to mongodb
 const MONGODB_URI = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@portfoliodb.n5g0z.mongodb.net/?retryWrites=true&w=majority`;
@@ -21,9 +31,10 @@ mongoose.connect(MONGODB_URI || 'mongodb://localhost/idadelveloper', {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
-    .then((result) => app.listen(PORT, () => {
-        console.log(`Server is starting at ${PORT}`);
-    }))
+    .then((result) => https.createServer(options, app)
+        .listen(PORT, () => {
+            console.log(`Server is starting at ${PORT}`);
+        }))
     .catch((err) => console.log(err));
 
 mongoose.connection.on('connected', () => {

@@ -15,8 +15,7 @@ export default function BlogHome() {
     const [isLoading, setIsLoading] = useState(true);
 
     const getArticles = () => {
-        const url = "http://" + process.env.REACT_APP_DOMAIN + ':' + process.env.REACT_APP_SERVER_PORT + '/articles'
-	console.log(url)
+        const url = "https://" + process.env.REACT_APP_DOMAIN + ':' + process.env.REACT_APP_SERVER_PORT + '/articles'
         axios.get(url)
         .then((response) => {
             const articles = response.data
