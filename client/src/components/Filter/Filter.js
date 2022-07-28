@@ -17,6 +17,7 @@ export default function Filter({setActiveCategory, activeCategory, setFiltered, 
         <button className={activeCategory === "" ? "active" : ""} onClick={() => setActiveCategory("")}>All</button>
         <button className={activeCategory === "career" ? "active" : ""} onClick={() => setActiveCategory("career")}>career</button>
         <button className={activeCategory === "internship" ? "active" : ""} onClick={() => setActiveCategory("internship")}>internship</button>
+        <button className={activeCategory === "tutorial" ? "active" : ""} onClick={() => setActiveCategory("tutorial")}>tutorial</button>
         <button className={activeCategory === "opportunity" ? "active" : ""} onClick={() => setActiveCategory("opportunity")}>opportunity</button>
         <button className={activeCategory === "other" ? "active" : ""} onClick={() => setActiveCategory("other")}>other</button>
     </div>

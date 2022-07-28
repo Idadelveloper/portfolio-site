@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Blog.css'
 import axios from 'axios'
 import Filter from '../Filter/Filter'
 import { motion } from 'framer-motion/dist/framer-motion'
 import Loading from '../Loading/Loading'
 import Posts from './Posts'
-const dotenv = require("dotenv");
+import useAnalyticsEventTracker from '../../useAnalyticsEventTracker'
 
 export default function BlogHome() {
+    const gaEventTracker = useAnalyticsEventTracker('Blog home')
 
     const [blogPosts, setBlogPosts] = useState([])
     const [filtered, setFiltered] = useState([])
@@ -54,7 +55,7 @@ export default function BlogHome() {
   return (
       <div className="single-blog">
         <h3 className="text-3xl font-semibold p-5">Welcome to my blog!!!</h3>
-        <p className="blog-more">Checkout more of my technical posts on <a href="https://medium.com/@idadelveloper" target="_blank">Medium</a>, <a href="https://idadelveloper.hashnode.dev/" target="_blank">Hashnode</a>, and <a href="https://dev.to/idadelveloper" target="_blank">Dev</a>.</p>
+        <p className="blog-more">Checkout more of my technical posts on <a href="https://medium.com/@idadelveloper" onClick={()=>gaEventTracker('medium')} target="_blank">Medium</a>, <a href="https://idadelveloper.hashnode.dev/" onClick={()=>gaEventTracker('hashnode')} target="_blank">Hashnode</a>, and <a href="https://dev.to/idadelveloper" onClick={()=>gaEventTracker('dev')} target="_blank">Dev</a>.</p>
         { isLoading ? <Loading /> : getData() }
       </div>
     

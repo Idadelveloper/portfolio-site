@@ -5,9 +5,11 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import useAnalyticsEventTracker from '../../useAnalyticsEventTracker'
 
 
 export default function MyResume() {
+    const gaEventTracker = useAnalyticsEventTracker('Resume');
     return (
         <div>
             <div className="myresume" id="resume">
@@ -20,12 +22,12 @@ export default function MyResume() {
                         <h6>Bamenda, North West Region, Cameroon</h6>
                     </div>
                     <div className="contact-links">
-                        <span><a href="mailto:idadelveloper@gmail.com" target="_blank"><FontAwesomeIcon icon={faEnvelope} size="1x" className="mr-2" />idadelveloper(at)gmail.com</a></span>
-                        <span><a href="https://idadelveloper.com" target="_blank"><FontAwesomeIcon icon={faGlobe} size="1x" className="mr-2" />idadelveloper.com</a></span>
-                        <span><a href="https://github.com/Idadelveloper" target="_blank"><FontAwesomeIcon icon={faGithub} size="1x" className="mr-2" />idadelveloper</a></span>
-                        <span><a href="https://www.linkedin.com/in/idadelveloper/" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="1x" className="mr-2"  />idadelveloper</a></span>
-                        <span><a href="https://facebook.com/idadelveloper" target="_blank"><FontAwesomeIcon icon={faFacebook} size="1x" className="mr-2" />idadelveloper</a></span>
-                        <span><a href="https://twitter.com/idadelveloper" target="_blank"><FontAwesomeIcon icon={faTwitter} size="1x" className="mr-2" />idadelveloper</a></span>
+                        <span><a href="mailto:idadelveloper@gmail.com" onClick={()=>gaEventTracker('resume - email')} target="_blank"><FontAwesomeIcon icon={faEnvelope} size="1x" className="mr-2" />idadelveloper(at)gmail.com</a></span>
+                        <span><a href="https://idadelveloper.com" onClick={()=>gaEventTracker('resume - website')} target="_blank"><FontAwesomeIcon icon={faGlobe} size="1x" className="mr-2" />idadelveloper.com</a></span>
+                        <span><a href="https://github.com/Idadelveloper" onClick={()=>gaEventTracker('resume - github')} target="_blank"><FontAwesomeIcon icon={faGithub} size="1x" className="mr-2" />idadelveloper</a></span>
+                        <span><a href="https://www.linkedin.com/in/idadelveloper/" onClick={()=>gaEventTracker('resume - linkedin')} target="_blank"><FontAwesomeIcon icon={faLinkedin} size="1x" className="mr-2"  />idadelveloper</a></span>
+                        <span><a href="https://facebook.com/idadelveloper" onClick={()=>gaEventTracker('resume - facebook')} target="_blank"><FontAwesomeIcon icon={faFacebook} size="1x" className="mr-2" />idadelveloper</a></span>
+                        <span><a href="https://twitter.com/idadelveloper" onClick={()=>gaEventTracker('resume - twitter')} target="_blank"><FontAwesomeIcon icon={faTwitter} size="1x" className="mr-2" />idadelveloper</a></span>
                     </div>
 
                 </div>
@@ -34,7 +36,7 @@ export default function MyResume() {
                         <div className="text-title mr-2"><h3 className="sub-heading"><span>Sum</span>mary</h3></div>
                         <div className="divider"></div> 
                     </div>
-                    <p>Currently a Computer Engineering student at the University of Bamenda, Cameroon. Super nerd who loves web, mobile, open source development and enjoys to customize all of the development environment. Interested in devising a better problem-solving method for challenging tasks, and learning new technologies and tools if the need arises. In addition, strongly believes technology is the future and will highly impact the development of my community.</p>
+                    <p>Computer engineering student that is interested in devising better problem-solving methods for challenging tasks as well as learning new technologies and tools when the need arises. I am a problem solver, team player, and junior software engineer proficient in Python, JavaScript, Golang, Linux, Windows and I also spend my time participating in community tech events like conferences, workshops and hackathons. I'm also very passionate about open-source and making contributions or supporting those who need guidance in getting started with opensource.</p>
                 </div>
 
                 <div className="resume-experience mb-6">
@@ -128,31 +130,6 @@ export default function MyResume() {
                     
                 </div>
 
-                <div className="resume-certifications mb-6">
-                    <div className="title-container">
-                            <div className="text-title mr-2"><h3 className="sub-heading"><span>Cer</span>tifications</h3></div>
-                            <div className="divider"></div> 
-                    </div>
-                    <div className="certification">
-                        <div className="cert mb-2">
-                            <p className="cert-name">Jun 2022 - <b>Generation Google Scholarship</b> , <a href="https://drive.google.com/file/d/1do9u9F4Xm-U3wAzgvAGLHt0tQZI3czsO/view">Generation Google Scholarship, EMEA, for Women in Computer Science</a></p>
-                            <p className="cert-giver">Google</p>
-                        </div>
-                        <div className="cert mb-2">
-                            <p className="cert-name">Aug 2021 - <b>Top 10 Finalist</b> , <a href="https://drive.google.com/file/d/1t52lP5K6TR13GT5pcGLcg6JKMxURREWJ/view">GDSC Solution Challenge Certificate of Recognition</a></p>
-                            <p className="cert-giver">Google Developers</p>
-                        </div>
-                        <div className="cert mb-2">
-                            <p className="cert-name">Jul 2021 - <b>Google Develper Student Clubs Lead</b> , <a href="https://dsc-certify.web.app/c/0C33E288DE7F">2020-2021 Cetificate of Completion</a></p>
-                            <p className="cert-giver">Google</p>
-                        </div>
-                        <div className="cert mb-2">
-                            <p className="cert-name">Dec 2019 - <b>Honors</b> , <a href="https://wqu.thedataincubator.com/certificate/5647904245022720">Scientific Computing and Python for Data Science</a></p>
-                            <p className="cert-giver">WorldQuant University</p>
-                        </div>
-                    </div>
-                </div>
-
                 <div className="resume-skills mb-6">
                     <div className="title-container">
                             <div className="text-title mr-2"><h3 className="sub-heading"><span>Ski</span>lls</h3></div>
@@ -183,6 +160,31 @@ export default function MyResume() {
                         <div className="">
                             <p className="ed-location mb-1">Bambili, Cameroon</p>
                             <p className="ed-date">Nov 2019 - Dec 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="resume-certifications mb-6">
+                    <div className="title-container">
+                            <div className="text-title mr-2"><h3 className="sub-heading"><span>Cer</span>tifications</h3></div>
+                            <div className="divider"></div> 
+                    </div>
+                    <div className="certification">
+                        <div className="cert mb-2">
+                            <p className="cert-name">Jun 2022 - <b>Generation Google Scholarship</b> , <a href="https://drive.google.com/file/d/1do9u9F4Xm-U3wAzgvAGLHt0tQZI3czsO/view">Generation Google Scholarship, EMEA, for Women in Computer Science</a></p>
+                            <p className="cert-giver">Google</p>
+                        </div>
+                        <div className="cert mb-2">
+                            <p className="cert-name">Aug 2021 - <b>Top 10 Finalist</b> , <a href="https://drive.google.com/file/d/1t52lP5K6TR13GT5pcGLcg6JKMxURREWJ/view">GDSC Solution Challenge Certificate of Recognition</a></p>
+                            <p className="cert-giver">Google Developers</p>
+                        </div>
+                        <div className="cert mb-2">
+                            <p className="cert-name">Jul 2021 - <b>Google Develper Student Clubs Lead</b> , <a href="https://dsc-certify.web.app/c/0C33E288DE7F">2020-2021 Cetificate of Completion</a></p>
+                            <p className="cert-giver">Google</p>
+                        </div>
+                        <div className="cert mb-2">
+                            <p className="cert-name">Dec 2019 - <b>Honors</b> , <a href="https://wqu.thedataincubator.com/certificate/5647904245022720">Scientific Computing and Python for Data Science</a></p>
+                            <p className="cert-giver">WorldQuant University</p>
                         </div>
                     </div>
                 </div>

@@ -14,7 +14,7 @@ export default function Skill() {
                     <div className="service  devops">HTML/CSS</div>
                     <div className="service opensource">Golang</div>
                     <div className="service web">Rust</div>
-                    <div className="service  devops">Dart</div>
+                    <div className="service  ds">Dart</div>
                 </Marquee>
                 <br />
                 <Marquee direction="right" pauseOnHover="true" >
@@ -24,6 +24,7 @@ export default function Skill() {
                     <div className="service ml-ai">Flutter</div>
                     <div className="service community">Flask</div>
                     <div className="service blockchain">Django</div>
+                    <div className="service mobile">Machine Learning</div>
                 </Marquee>
             </div>
         </div>

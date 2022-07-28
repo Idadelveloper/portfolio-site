@@ -134,6 +134,13 @@ li>ol {
     color: #6851DD;
 }
 
+.single-top-image {
+    width: 100% !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media only screen and (max-width: 1000px) {
     /* Blog home styles: */
     .blog-home {

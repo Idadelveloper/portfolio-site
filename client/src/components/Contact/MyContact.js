@@ -3,8 +3,11 @@ import './MyContact.css'
 import contactImage from '../../assets/3d-center-purple.png'
 import emailjs from '@emailjs/browser';
 import { useAlert } from 'react-alert'
+import useAnalyticsEventTracker from '../../useAnalyticsEventTracker';
 
 export default function MyContact() {
+    const gaEventTracker = useAnalyticsEventTracker('Contact mode')
+
     const [name, setName] = useState("");
     const [subject, setSubject] = useState("");
     const [email, setEmail] = useState("");
@@ -23,8 +26,10 @@ export default function MyContact() {
         emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAIL_PUBLIC_KEY)
         .then((result) => {
             alert.show('Sucess!!, your message was sent.')
+            gaEventTracker('form sent')
         }, (error) => {
             alert.show('Opps! Your message was not sent')
+            gaEventTracker('form not sent')
         });
     };
     return (
@@ -35,7 +40,7 @@ export default function MyContact() {
                     <div className="contact-circle2"></div>
                     <div className="contact-form">
                         <form action="" className="form" ref={form} onSubmit={sendEmail}>
-                            <p className="mt-5">Do you have anything to tell me? I will love to hear from you :)</p>
+                            <p className="mt-5">Do you have anything to tell me? You can fill the form below or directly <a href="mailto:idadelveloper@gmail.com" className="con-email" onClick={()=>gaEventTracker('email sent')}>email me</a>. I will love to hear from you :)</p>
                             
                             <input type="text" name="name" className="name mt-4" placeholder="Full Name" tabIndex="1" value={name} onChange={(e) => setName(e.target.value)} required />
 

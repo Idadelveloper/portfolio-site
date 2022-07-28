@@ -1,5 +1,8 @@
 .projects {
     padding-top: 5rem;
+    overflow: hidden;
+    max-width: 100%;
+    position: relative;
 }
 
 .projects>p>a {

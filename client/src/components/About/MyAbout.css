@@ -46,6 +46,17 @@
     margin-bottom: 5vh;
 }
 
+.ida-image {
+    width: 25%;
+    height: 25%;
+    text-align: center;
+    border-radius: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
 @media only screen and (max-width: 800px) {
     /* For smaller screens: */
     .circle-a {
@@ -63,5 +74,9 @@
     }
     .about-content div {
         font-size: 0.8rem;
+    }
+    .ida-image {
+        width: 75%;
+        height: 75%;
     }
 }

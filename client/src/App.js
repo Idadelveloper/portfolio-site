@@ -6,6 +6,11 @@ import { theme } from './theme';
 // import Cursor from './components/Cursor';
 import MyRoutes from './routes/MyRoutes';
 
+// add google analytics
+import ReactGA from 'react-ga';
+const TRACKING_ID = process.env.REACT_APP_TRACKING_ID; 
+ReactGA.initialize(TRACKING_ID);
+
 
 function App() {
 

@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React, {useEffect} from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Home from '../pages/Home';
 import About from '../pages/About';
@@ -8,7 +8,14 @@ import Blog from '../pages/Blog';
 import Contact from '../pages/Contact';
 import NotFoundPage from '../pages/NotFoundPage';
 import SingleBlog from '../pages/SingleBlog';
+import ReactGA from 'react-ga';
+
+
 export default function MyRoutes() {
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }, []);
+
     return (
         <Router>
             <Routes>

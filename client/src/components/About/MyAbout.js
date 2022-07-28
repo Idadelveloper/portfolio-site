@@ -1,5 +1,6 @@
 import React from 'react'
 import './MyAbout.css'
+import ida from '../../assets/ida/ida.jpg'
 
 export default function MyAbout() {
     return (
@@ -10,6 +11,8 @@ export default function MyAbout() {
                 <div className="circle circle-c"></div>
                 <div className="about-content">
                     <div><p>I’m currently a Computer Engineering student at The University of Bamenda in Cameroon who loves learning about new technologies and figuring out how to use new tools I come across. I have not always been this nerdy techie. I was initially in med school but had to drop out after I wrote my first Python script back in 2019. I had no idea what I was missing back then and since I started my tech journey, I haven’t looked back!!!</p></div>
+
+                    <img src={ida} alt="Ida Delphine's image" className="ida-image" />
 
                     <div><p>A couple of months into my tech journey trying out new languages and trying to figure out what works best for me, I came across opensource which changed my life and the way I view technology in general. I am very passionate about open source and getting others involved in it because I believe the more folks get involved, the better most of the tech we enjoy will be. I’ve had the opportunity to contribute to some cool opensource projects through Outreachy, Google Summer of Code, and the Major League Hacking Fellowship.</p> </div>
 

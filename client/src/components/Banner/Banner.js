@@ -33,7 +33,7 @@ export default function Banner() {
                     <h1 className="text-left p-10 idadel">Ida<br/>Delphine</h1>
                     <div className="circle circle2"></div>
                     <div className="intro mx-5">
-                        <p className="home-greeting">Hello 👋, I'm happy you found me. I'm curently a computer engineering student and developer based in Cameroon. Just a nerd that enjoys coding and loves costumizing her development environment. I'm interested in devising better problem-solving methods for challenging tasks, learning new technologies and tools if the need arises.</p>
+                        <p className="home-greeting">Hello 👋, I'm happy you found me. I'm curently a computer engineering student and developer based in Cameroon. Just a nerd that enjoys coding and loves costumizing her development environment. I'm interested in devising better problem-solving methods to solve challenging tasks, learning new technologies and tools when the need arises.</p>
                     </div>
                     <img src={RightBackground} alt=""className="img2 absolute object-right-bottom" />
                 </div>
