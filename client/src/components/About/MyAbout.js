@@ -1,11 +1,26 @@
 import React from 'react'
 import './MyAbout.css'
 import ida from '../../assets/ida/ida.jpg'
+import { Helmet } from 'react-helmet'
 
 export default function MyAbout() {
     return (
         <div>
             <div className="about">
+                <Helmet>
+                        <meta
+                            property="og:title"
+                            content={"Ida Delphine | About"}
+                        />
+                        <meta
+                            property="og:image"
+                            content={ida}
+                        />
+                        <meta
+                            name="description"
+                            content={"All about Meh Mbeh Ida Delphine"}
+                        />
+                </Helmet>
                 <div className="circle circle-a"></div>
                 <div className="circle circle-b"></div>
                 <div className="circle circle-c"></div>

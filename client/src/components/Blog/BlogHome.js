@@ -6,6 +6,8 @@ import { motion } from 'framer-motion/dist/framer-motion'
 import Loading from '../Loading/Loading'
 import Posts from './Posts'
 import useAnalyticsEventTracker from '../../useAnalyticsEventTracker'
+import { Helmet } from 'react-helmet'
+import image from '../../assets/image-2.jpg'
 
 export default function BlogHome() {
     const gaEventTracker = useAnalyticsEventTracker('Blog home')
@@ -37,6 +39,20 @@ export default function BlogHome() {
     const getData = () => {
         return (
             <div>
+                <Helmet>
+                    <meta
+                        property="og:title"
+                        content={"Ida's Blog"}
+                    />
+                    <meta
+                        property="og:image"
+                        content={image}
+                    />
+                    <meta
+                        name="description"
+                        content={"Ida Delphine's Blog posts"}
+                    />
+                </Helmet>
                 <div className="categories flex justify-center py-10 px-3 categories">
                     <h6 className="">Filter by</h6>
                     <Filter blogPosts={blogPosts} setFiltered={setFiltered} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />

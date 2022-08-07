@@ -7,6 +7,7 @@ import parse from 'html-react-parser'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Loading from '../Loading/Loading'
+import {Helmet} from "react-helmet"
 
 export default function BlogSingle() {
     let { slug } = useParams();
@@ -39,6 +40,20 @@ export default function BlogSingle() {
     const post = (post) => {
         return (
             <div className="single-blog text-left">
+                <Helmet>
+                    <meta
+                        property="og:title"
+                        content={"Ida's Blog | " + post?.title}
+                    />
+                    <meta
+                        property="og:image"
+                        content={post?.image}
+                    />
+                    <meta
+                        name="description"
+                        content={post?.description}
+                    />
+                </Helmet>
                 <div className="single-head mb-5 text-left mx-10">
                     <div className="flex justify-between items-center tits text-center">
                         <h1 className="blog-tit text-5xl font-semibold mb-5">{post?.title}</h1>
