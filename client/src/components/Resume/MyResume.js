@@ -6,12 +6,23 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import useAnalyticsEventTracker from '../../useAnalyticsEventTracker'
+import { Helmet } from 'react-helmet'
 
 
 export default function MyResume() {
     const gaEventTracker = useAnalyticsEventTracker('Resume');
     return (
         <div>
+            <Helmet>
+                <meta
+                    property="og:title"
+                    content={"Ida Delphine | Resume"}
+                />
+                <meta
+                    name="description"
+                    content={"Ida Delphine's resume"}
+                />
+            </Helmet>
             <div className="myresume" id="resume">
                 <div className="resume-heading">
                     <h1 className="ida-name mb-2">Meh Mbeh <span><b>Ida Delphine</b></span></h1>

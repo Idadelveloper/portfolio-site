@@ -4,6 +4,7 @@ import contactImage from '../../assets/3d-center-purple.png'
 import emailjs from '@emailjs/browser';
 import { useAlert } from 'react-alert'
 import useAnalyticsEventTracker from '../../useAnalyticsEventTracker';
+import { Helmet } from 'react-helmet';
 
 export default function MyContact() {
     const gaEventTracker = useAnalyticsEventTracker('Contact mode')
@@ -34,6 +35,16 @@ export default function MyContact() {
     };
     return (
         <div>
+            <Helmet>
+                <meta
+                    property="og:title"
+                    content={"Ida Delphine | Contact"}
+                />
+                <meta
+                    name="description"
+                    content={"Contact Ida Delphine"}
+                />
+            </Helmet>
             <div className="">
                 <div className="contact relative">
                     <div className="contact-circle1"></div>

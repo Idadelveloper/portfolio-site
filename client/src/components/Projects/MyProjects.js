@@ -1,7 +1,8 @@
 import React from 'react'
 import './Projects.css'
 import ProjectCard from './ProjectCard'
-import projects from './projects.json'
+import projects from './projects.json' 
+import { Helmet } from 'react-helmet'
 
 export default function MyProjects() {
   
@@ -13,6 +14,16 @@ export default function MyProjects() {
   }
   return (
     <div className="">
+    <Helmet>
+        <meta
+            property="og:title"
+            content={"Ida Delphine | Projects"}
+        />
+        <meta
+            name="description"
+            content={"Ida Delphine's projects"}
+        />
+    </Helmet>
       <div className="projects">
         <h2 className="text-2xl semibold">Here are a couple of cool projects I have worked on </h2>
         <p>Checkout more of my projects on <a href="https://github.com/Idadelveloper" target="_blank">GitHub</a></p>
